@@ -4,3 +4,7 @@ chromadb>=0.5.0
 pypdf>=4.2.0
 python-docx>=1.1.0
 python-dotenv>=1.0.0
+# Pin OpenTelemetry to a version compatible with protobuf 4+/5+
+# Without this Streamlit Cloud resolves 1.11.x which crashes on modern protobuf
+opentelemetry-exporter-otlp-proto-grpc>=1.27.0
+protobuf>=4.21.0,<6.0.0
